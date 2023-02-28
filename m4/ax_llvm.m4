@@ -50,7 +50,7 @@ AC_DEFUN([AX_LLVM],
     with_llvm_path="$with_llvm/bin$PATH_SEPARATOR$with_llvm"
   fi
 
-  AC_PATH_PROG([LLVM_CONFIG], [llvm-config], [], [$with_llvm_path])
+  AC_PATH_PROG([LLVM_CONFIG], [llvm-config-7], [], [$with_llvm_path])
   if test -z "$LLVM_CONFIG"; then
     AC_MSG_ERROR(
       [LLVM is required but program `llvm-config` cannot be found in $with_llvm_path])
