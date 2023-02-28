@@ -71,7 +71,7 @@ def compute_predicted_time(region, invocations):
   invitro_cycles = 0.
   err = False
   logger.info("Predicted cycles for region: {0}".format(region))
-  for invocation, part in invocations.iteritems():
+  for invocation, part in invocations.items():
     replay_file = "{0}/{1}_{2}.csv".format(var.CERE_REPLAY_PATH, region, invocation)
     if os.path.isfile(replay_file):
       with open(replay_file) as invitro:
